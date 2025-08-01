@@ -21,7 +21,7 @@ const ProjectCard = ({ project }) => {
                     <p className="text-light-gray mt-3">{project.description}</p>
                     <SkillList techs={project.techs}/>
                     <div className="flex items-center gap-2 w-full mt-8 max-md:flex-col">
-                        {project.demo && (
+                        {/* {project.demo && (
                             <a
                                 href={project.demo}
                                 target="_blank"
@@ -29,7 +29,18 @@ const ProjectCard = ({ project }) => {
                             >
                                 🌐 Live Demo
                             </a>
-                        )}
+                        )} */}
+                        {project.demos?.map((demo, index) => (
+                            <a
+                                key={index}
+                                href={demo.url}
+                                target="_blank"
+                                className="w-1/3 bg-gray-200/10 uppercase text-xs transition-all hover:bg-gray-200/20 rounded-full font-bold text-white flex items-center justify-center px-4 py-2 gap-2 max-md:w-full"
+                            >
+                                🌐 {demo.label || `Live Demo ${index + 1}`}
+                            </a>
+                        ))}
+
                         {project.source && (
                             <a
                                 href={project.source}

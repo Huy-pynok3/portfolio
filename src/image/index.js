@@ -17,6 +17,8 @@ import cloudinary from './cloudinary-svgrepo-com.svg'
 import nodejs from './icons8-nodejs.svg'
 import mongo from './MongoDB.svg'
 import metamask from './metamask-icon.svg'
+import chevron from './chevron-down.svg'
+import copy from './copy.svg'
 import home from'./Project1/home.png'
 import preview1_1 from'./Project1/preview_1.png'
 import preview1_2 from'./Project1/preview_2.png'
@@ -33,9 +35,12 @@ import preview_2 from'./Project2/preview-2.png'
 import preview_3 from'./Project2/preview-3.png'
 import preview_4 from'./Project2/preview-4.jpg'
 import preview_5 from'./Project2/preview_5.png'
+import preview_6 from'./Project2/preview_6.png'
 
 export default {
     react_icon,
+    copy,
+    chevron,
     html_icon,
     css_icon,
     javascript_icon,
@@ -72,4 +77,5 @@ export default {
     preview_4,
     preview_3,
     preview_5,
+    preview_6,
 }

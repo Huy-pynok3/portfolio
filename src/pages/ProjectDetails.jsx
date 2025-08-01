@@ -3,6 +3,7 @@ import img from '@/image'
 import { useParams } from "react-router-dom";
 import projects from "@/data/projects";
 import SkillList from "@/components/Tech/SkillList";
+import InlineLiveDemoDropdown from "@/components/InlineLiveDemoDropdown";
 
 const ProjectDetails = () => {
     const { slug } = useParams();
@@ -24,14 +25,27 @@ const ProjectDetails = () => {
                         <img className='invert' src={img.brand_github} alt="" />
                         Github
                     </a>
-                    <a
+                    {/* <a
                         target="_blank"
                         className="flex items-center gap-1 bg-gray-200/10 max-sm:w-full max-sm:justify-center rounded-full py-1 px-6 hover:bg-gray-200/20 transition-all"
                         href={project.demo}
                     >
                         <img className='invert' src={img.brand_world} alt="" />
                         Live Demo
-                    </a>
+                    </a> */}
+                    {project.demos?.length > 1 ? (
+                            <InlineLiveDemoDropdown demos={project.demos} />
+                        ) : project.demos?.length === 1 ? (
+                            <a
+                                target="_blank"
+                                className="flex items-center gap-1 bg-gray-200/10 max-sm:w-full max-sm:justify-center rounded-full py-1 px-6 hover:bg-gray-200/20 transition-all text-white text-sm"
+                                href={project.demos[0].url}
+                            >
+                                <img className='invert' src={img.brand_world} alt="" />
+                                {project.demos[0].label || "Live Demo"}
+                            </a>
+                        ) : null}
+
                     <a
                         target="_blank"
                         className="flex items-center gap-1 bg-gray-200/10 max-sm:w-full max-sm:justify-center rounded-full py-1 px-6 hover:bg-gray-200/20 transition-all"
@@ -78,7 +92,7 @@ const ProjectDetails = () => {
                     onClick={() => setPreviewImage(img)}
                 />
                 ))}
-                
+
                 {/* Preview image modal */}
                 {previewImage && (
                 <div
