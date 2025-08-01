@@ -73,7 +73,7 @@ const projects = [
         techs: ["React", "Tailwind", "Cloudinary", "JavaScript", "NodeJs" , "MongDB", "Shadcn", "Web3"],
         features: [
             "🧾 Wallet-authenticated KYC submission with signature check.",
-            "🎓 Real students perform identity checks — not bots.",
+            "💸 Supported two payment options: USDT (BEP-20) or bank transfer.",
             "⏱️ Countdown timer and emoji session ID to catch lazy/fake verifications.",
             "🔐 Web3 + real-world hybrid trust model.",
             "🛠️ Admin dashboard for reviewing sessions and managing payouts.",
@@ -86,6 +86,9 @@ const projects = [
             img.preview_0,
             img.preview_1,
             img.preview_2,
+            img.preview_3,
+            img.preview_5,
+            img.preview_4,
           ],
           videoEmbed: "https://www.youtube.com/?app=desktop&hl=vi"
     },

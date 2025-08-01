@@ -30,6 +30,9 @@ import home1 from'./Project2/home.png'
 import preview_0 from'./Project2/preview-0.png'
 import preview_1 from'./Project2/preview-1.png'
 import preview_2 from'./Project2/preview-2.png'
+import preview_3 from'./Project2/preview-3.png'
+import preview_4 from'./Project2/preview-4.jpg'
+import preview_5 from'./Project2/preview_5.png'
 
 export default {
     react_icon,
@@ -64,5 +67,9 @@ export default {
     home1,
     preview_0,
     preview_1,
-    preview_2
+    preview_2,
+
+    preview_4,
+    preview_3,
+    preview_5,
 }

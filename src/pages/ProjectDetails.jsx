@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import img from '@/image'
 import { useParams } from "react-router-dom";
 import projects from "@/data/projects";
@@ -7,7 +7,8 @@ import SkillList from "@/components/Tech/SkillList";
 const ProjectDetails = () => {
     const { slug } = useParams();
     const project = projects.find(p => p.slug === slug);
-  
+    const [previewImage, setPreviewImage] = useState(null);
+
     if (!project) return <div className="text-white">Project not found</div>;
 
     return (
@@ -71,11 +72,27 @@ const ProjectDetails = () => {
                 {project.screenshots.map((img, idx) => (
                 <img
                     key={idx}
-                    className="border-2 border-light-gray/50 rounded-xl"
+                    className="border-2 border-light-gray/50 rounded-xl cursor-pointer"
                     src={img}
                     alt={`${project.name} screenshot ${idx + 1}`}
+                    onClick={() => setPreviewImage(img)}
                 />
                 ))}
+                
+                {/* Preview image modal */}
+                {previewImage && (
+                <div
+                    className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center"
+                    onClick={() => setPreviewImage(null)}
+                >
+                    <img
+                        src={previewImage}
+                        alt="Preview"
+                        className="max-w-[90vw] max-h-[90vh] rounded-lg shadow-lg"
+                    />
+                </div>
+                )}
+
             </div>
             </div>
         </>
