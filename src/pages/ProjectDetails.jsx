@@ -14,7 +14,9 @@ const ProjectDetails = () => {
 
     return (
         <>  <div className="pt-10">
-            <div className="w-full flex flex-wrap items-center justify-between gap-5 mb-10 max-md:flex-col">
+            {/* <div className="sticky bg-[#0c0f11] z-30 top-0 bg-opacity-95 backdrop-blur-md shadow-md py-2 w-full flex flex-wrap items-center justify-between gap-5 mb-10 max-md:flex-col"> */}
+            <div className="sm:sticky sm:top-0 z-30 w-full bg-[#0c0f11] bg-opacity-95 backdrop-blur-md shadow-md py-2 flex flex-wrap items-center justify-between gap-4 mb-10">
+
                 <h1 className="font-bold text-xl tracking-widest text-white max-sm:mb-4">{project.title}</h1>
                 <div className="flex items-center gap-3 text-sm text-white max-sm:flex-col max-sm:w-full">
                     <a

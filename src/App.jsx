@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import ProjectDetails from "./pages/ProjectDetails";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 const App = () => (
     <Router>
@@ -13,8 +14,8 @@ const App = () => (
                 <Route path="/" element={<Home />} />
                 <Route path="/projects/:slug" element={<ProjectDetails />} />
             </Routes>
-
             <Footer />
+            <ScrollToTopButton />
 
         </div>
     </Router>
